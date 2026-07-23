@@ -1,456 +1,109 @@
+// ===================================
+// SHWE SIN NATURAL PRODUCTS
+// Version 3 Script
+// ===================================
 
-/* =====================================
-   SHWE SIN NATURAL PRODUCTS
-   STYLE.CSS VERSION 3
-===================================== */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    background:#f7faf7;
-    color:#333;
-    line-height:1.6;
-}
-
-/* ---------- NAVBAR ---------- */
-
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:15px 8%;
-    background:#0b6b3a;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    box-shadow:0 3px 10px rgba(0,0,0,.15);
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-}
-
-.logo img{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    margin-right:12px;
-}
-
-.logo h2{
-    color:#fff;
-    font-size:24px;
-}
-
-.nav-links{
-    display:flex;
-    list-style:none;
-}
-
-.nav-links li{
-    margin-left:25px;
-}
-
-.nav-links a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:600;
-    transition:.3s;
-}
-
-.nav-links a:hover{
-    color:#ffd54f;
-}
-
-/* ---------- HERO ---------- */
-
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:70px 8%;
-    background:linear-gradient(#e8f5e9,#ffffff);
-}
-
-.hero-left{
-    width:50%;
-}
-
-.hero-left h1{
-    font-size:50px;
-    color:#0b6b3a;
-    margin-bottom:20px;
-}
-
-.hero-left p{
-    font-size:20px;
-    margin-bottom:30px;
-}
-
-.hero-right{
-    width:45%;
-}
-
-.hero-right img{
-    width:100%;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-}
-
-/* ---------- BUTTON ---------- */
-
-.btn,
-.btn-outline{
-    display:inline-block;
-    padding:14px 30px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-    margin-right:10px;
-    transition:.3s;
-}
-
-.btn{
-    background:#0b6b3a;
-    color:#fff;
-}
-
-.btn:hover{
-    background:#084f2b;
-}
-
-.btn-outline{
-    border:2px solid #0b6b3a;
-    color:#0b6b3a;
-}
-
-.btn-outline:hover{
-    background:#0b6b3a;
-    color:#fff;
-}
-
-/* ---------- SECTION ---------- */
-
-section{
-    padding:70px 8%;
-}
-
-.section-title{
-    text-align:center;
-    color:#0b6b3a;
-    font-size:36px;
-    margin-bottom:40px;
-}
-
-/* ---------- PRODUCT CARDS ---------- */
-
-.card-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:#fff;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 8px 18px rgba(0,0,0,.12);
-    transition:.3s;
-    text-align:center;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
-.card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-}
-
-.card h3{
-    margin:15px 0;
-    color:#0b6b3a;
-}
-
-.card p{
-    padding-bottom:20px;
-}
-
-/* =====================================
-   GALLERY
-===================================== */
-
-.gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.gallery-grid img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:15px;
-    transition:.4s;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-.gallery-grid img:hover{
-    transform:scale(1.05);
-}
-
-/* =====================================
-   ABOUT
-===================================== */
-
-.about-container{
-    display:flex;
-    gap:40px;
-    align-items:center;
-    flex-wrap:wrap;
-}
-
-.about-image{
-    flex:1;
-}
-
-.about-image img{
-    width:100%;
-    border-radius:20px;
-}
-
-.about-text{
-    flex:1;
-}
-
-.about-text h3{
-    color:#0b6b3a;
-    font-size:32px;
-    margin-bottom:15px;
-}
-
-/* =====================================
-   REVIEWS
-===================================== */
-
-.review-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.review-card{
-    background:#fff;
-    padding:25px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
-}
-
-.review-card h4{
-    margin-top:15px;
-    color:#0b6b3a;
-}
-
-/* =====================================
-   SOCIAL
-===================================== */
-
-.social-buttons{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.facebook,
-.tiktok{
-    padding:15px 35px;
-    border-radius:40px;
-    text-decoration:none;
-    color:#fff;
-    font-weight:bold;
-}
-
-.facebook{
-    background:#1877F2;
-}
-
-.tiktok{
-    background:#000;
-}
-
-/* =====================================
-   QR CODE
-===================================== */
-
-.qr-container{
-    display:flex;
-    justify-content:center;
-    gap:40px;
-    flex-wrap:wrap;
-}
-
-.qr-container img{
-    width:180px;
-    border-radius:10px;
-}
-
-/* =====================================
-   CONTACT
-===================================== */
-
-.contact-container{
-    display:flex;
-    gap:40px;
-    flex-wrap:wrap;
-}
-
-.contact-info,
-.contact-form{
-    flex:1;
-}
-
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:15px;
-    border:1px solid #ccc;
-    border-radius:10px;
-    font-size:16px;
-}
-
-.contact-form button{
-    border:none;
-    cursor:pointer;
-}
-
-/* =====================================
-   GOOGLE MAP
-===================================== */
-
-.map iframe{
-    width:100%;
-    height:400px;
-    border:none;
-    border-radius:15px;
-}
-
-/* =====================================
-   FOOTER
-===================================== */
-
-footer{
-    background:#0b6b3a;
-    color:#fff;
-    padding:40px 8%;
-}
-
-.footer-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-footer a{
-    color:#fff;
-    text-decoration:none;
-}
-
-.copyright{
-    text-align:center;
-    margin-top:30px;
-    border-top:1px solid rgba(255,255,255,.3);
-    padding-top:20px;
-}
-
-/* =====================================
-   FLOATING BUTTONS
-===================================== */
-
-.floating-call,
-.floating-facebook,
-.floating-tiktok{
-    position:fixed;
-    right:20px;
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-decoration:none;
-    color:#fff;
-    font-size:24px;
-    box-shadow:0 5px 15px rgba(0,0,0,.25);
-}
-
-.floating-call{
-    bottom:150px;
-    background:#28a745;
-}
-
-.floating-facebook{
-    bottom:85px;
-    background:#1877F2;
-}
-
-.floating-tiktok{
-    bottom:20px;
-    background:#000;
-}
-
-/* =====================================
-   MOBILE
-===================================== */
-
-@media(max-width:768px){
-
-.navbar{
-    flex-direction:column;
-}
-
-.nav-links{
-    flex-direction:column;
-    margin-top:15px;
-    text-align:center;
-}
-
-.nav-links li{
-    margin:10px 0;
-}
-
-.hero{
-    flex-direction:column;
-}
-
-.hero-left,
-.hero-right{
-    width:100%;
-    text-align:center;
-}
-
-.hero-left h1{
-    font-size:36px;
-}
-
-.hero-right{
-    margin-top:30px;
-}
-
-.about-container,
-.contact-container{
-    flex-direction:column;
-}
+// Navbar Shadow
+window.addEventListener("scroll", function () {
+
+    const nav = document.querySelector(".navbar");
+
+    if (window.scrollY > 50) {
+
+        nav.style.background = "#084f2b";
+        nav.style.transition = "0.3s";
+
+    } else {
+
+        nav.style.background = "#0b6b3a";
+
+    }
+
+});
+
+// Welcome Message
+window.addEventListener("load", function () {
+
+    console.log("Welcome To Shwe Sin Natural Products");
+
+});
+
+// Smooth Button Animation
+const buttons = document.querySelectorAll(".btn,.btn-outline");
+
+buttons.forEach(btn => {
+
+    btn.addEventListener("mouseenter", () => {
+
+        btn.style.transform = "scale(1.05)";
+
+    });
+
+    btn.addEventListener("mouseleave", () => {
+
+        btn.style.transform = "scale(1)";
+
+    });
+
+});
+
+// Back To Top Button
+const topButton = document.createElement("button");
+
+topButton.innerHTML = "⬆";
+
+topButton.id = "topButton";
+
+document.body.appendChild(topButton);
+
+topButton.style.position = "fixed";
+topButton.style.bottom = "20px";
+topButton.style.left = "20px";
+topButton.style.width = "50px";
+topButton.style.height = "50px";
+topButton.style.border = "none";
+topButton.style.borderRadius = "50%";
+topButton.style.background = "#0b6b3a";
+topButton.style.color = "#fff";
+topButton.style.fontSize = "20px";
+topButton.style.display = "none";
+topButton.style.cursor = "pointer";
+topButton.style.boxShadow = "0 5px 15px rgba(0,0,0,.2)";
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+
+        topButton.style.display = "block";
+
+    } else {
+
+        topButton.style.display = "none";
+
+    }
+
+});
+
+topButton.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+// Footer Year
+const year = new Date().getFullYear();
+
+const copy = document.querySelector(".copyright");
+
+if(copy){
+
+copy.innerHTML =
+"© " + year + " Shwe Sin Natural Products. All Rights Reserved.";
 
 }
