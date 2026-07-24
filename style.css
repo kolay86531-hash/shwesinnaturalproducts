@@ -453,3 +453,38 @@ footer a{
 }
 
 }
+/* ===== DARK MODE ===== */
+
+#darkModeBtn{
+    background:#fff;
+    color:#0b6b3a;
+    border:none;
+    padding:10px 15px;
+    border-radius:25px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.dark-mode{
+    background:#121212;
+    color:#ffffff;
+}
+
+.dark-mode section{
+    background:#121212;
+}
+
+.dark-mode .card,
+.dark-mode .review-card{
+    background:#1f1f1f;
+    color:#ffffff;
+}
+
+.dark-mode footer{
+    background:#000;
+}
+
+.dark-mode .navbar{
+    background:#000;
+}
