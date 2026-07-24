@@ -107,3 +107,18 @@ copy.innerHTML =
 "© " + year + " Shwe Sin Natural Products. All Rights Reserved.";
 
 }
+// ===============================
+// DARK MODE
+// ===============================
+
+const darkBtn = document.getElementById("darkModeBtn");
+
+if(darkBtn){
+
+darkBtn.onclick = function(){
+
+document.body.classList.toggle("dark-mode");
+
+};
+
+}
