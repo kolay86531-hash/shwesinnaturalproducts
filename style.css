@@ -1,588 +1,1239 @@
-<!DOCTYPE html>
-<html lang="en">
+/* ==========================================
+   SHWE SIN NATURAL PRODUCTS
+   STYLE.CSS VERSION 5
+   ========================================== */
 
-<head>
+/* RESET */
 
-<meta charset="UTF-8">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+html{
+    scroll-behavior:smooth;
+}
 
-<title>Products | Shwe Sin Natural Products</title>
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7faf7;
+    color:#333;
+    line-height:1.7;
+}
 
-<meta name="description"
-content="Natural Handmade Soap, Herbal Shampoo and Hair Care Products">
+/* LINKS */
 
-<meta name="keywords"
-content="Natural Soap, Herbal Shampoo, Myanmar Handmade Products">
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-<link rel="stylesheet" href="style.css">
+/* IMAGES */
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+img{
+    max-width:100%;
+    display:block;
+}
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+/* CONTAINER */
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+/* ==========================
+NAVBAR
+========================== */
 
-</head>
+.navbar{
 
-<body>
+position:sticky;
 
-<!-- ==========================
-NAVIGATION
-========================== -->
+top:0;
 
-<nav class="navbar">
+z-index:1000;
 
-<div class="logo">
+display:flex;
 
-<a href="index.html">
+justify-content:space-between;
 
-<img src="images/logo.png" alt="Logo">
+align-items:center;
 
-</a>
+padding:15px 8%;
 
-<h2>Shwe Sin Natural Products</h2>
+background:#0b6b3a;
 
-</div>
+box-shadow:0 5px 15px rgba(0,0,0,.15);
 
-<div class="menu-toggle" id="menu-toggle">
+}
 
-☰
+/* LOGO */
 
-</div>
+.logo{
 
-<ul class="nav-links">
+display:flex;
 
-<li><a href="index.html">Home</a></li>
+align-items:center;
 
-<li><a class="active" href="products.html">Products</a></li>
+gap:12px;
 
-<li><a href="gallery.html">Gallery</a></li>
+}
 
-<li><a href="about.html">About</a></li>
+.logo img{
 
-<li><a href="contact.html">Contact</a></li>
+width:60px;
 
-</ul>
+height:60px;
 
-</nav>
+border-radius:50%;
 
-<!-- ==========================
+object-fit:cover;
+
+}
+
+.logo h2{
+
+color:#fff;
+
+font-size:26px;
+
+font-weight:700;
+
+}
+
+/* MENU */
+
+.nav-links{
+
+display:flex;
+
+list-style:none;
+
+gap:25px;
+
+}
+
+.nav-links a{
+
+color:#fff;
+
+font-size:17px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+color:#ffd54f;
+
+}
+
+.nav-links a.active{
+
+color:#ffd54f;
+
+}
+
+/* MOBILE MENU */
+
+.menu-toggle{
+
+display:none;
+
+font-size:30px;
+
+color:#fff;
+
+cursor:pointer;
+
+}
+
+/* ==========================
 HERO
-========================== -->
+========================== */
 
-<section class="hero">
+.hero{
 
-<div class="hero-left">
+display:flex;
 
-<h1>
+align-items:center;
 
-Natural Products Collection
+justify-content:space-between;
 
-</h1>
+padding:80px 8%;
 
-<p>
+background:linear-gradient(to right,#eef8ef,#ffffff);
 
-Premium Handmade Soap,
-Herbal Shampoo,
-Hair Care Products
-Made With Love.
+gap:40px;
 
-</p>
+}
 
-<a href="#products"
-class="btn">
+.hero-left{
 
-View Products
+flex:1;
 
-</a>
+}
 
-<a href="contact.html"
-class="btn-outline">
+.hero-left h1{
 
-Contact Us
+font-size:52px;
 
-</a>
+color:#0b6b3a;
 
-</div>
+margin-bottom:20px;
 
-<div class="hero-right">
+line-height:1.2;
 
-<img src="images/banner2.jpg"
-alt="Products Banner">
+}
 
-</div>
+.hero-left p{
 
-</section>
+font-size:20px;
 
-<!-- ==========================
-SEARCH
-========================== -->
+margin-bottom:30px;
 
-<section class="search-section">
+color:#555;
 
-<h2 class="section-title">
+}
 
-Find Your Favorite Product
+.hero-right{
 
-</h2>
+flex:1;
 
-<input
-type="text"
-id="searchInput"
-placeholder="Search Products...">
+display:flex;
 
-</section>
+justify-content:center;
 
-<!-- ==========================
-CATEGORY
-========================== -->
+}
 
-<section class="categories">
+.hero-right img{
 
-<div class="category-buttons">
+max-width:450px;
 
-<button class="category-btn active">
+width:100%;
 
-All
+border-radius:20px;
 
-</button>
+box-shadow:0 10px 30px rgba(0,0,0,.15);
 
-<button class="category-btn">
+}
 
-Soap
+/* BUTTONS */
 
-</button>
+.btn{
 
-<button class="category-btn">
+display:inline-block;
 
-Shampoo
+padding:14px 32px;
 
-</button>
+background:#0b6b3a;
 
-<button class="category-btn">
+color:#fff;
 
-Hair Care
+border-radius:30px;
 
-</button>
+font-weight:600;
 
-</div>
+transition:.3s;
 
-</section>
+margin-right:10px;
 
-<!-- ==========================
-PRODUCTS START
-========================== -->
+}
 
-<section
-id="products">
+.btn:hover{
 
-<h2 class="section-title">
+background:#084c29;
 
-Featured Products
+transform:translateY(-3px);
 
-</h2>
+}
 
-<div class="card-container">
+.btn-outline{
 
-<!-- ==========================
-PRODUCT 1
-========================== -->
+display:inline-block;
+
+padding:14px 32px;
+
+border:2px solid #0b6b3a;
+
+color:#0b6b3a;
+
+border-radius:30px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-outline:hover{
+
+background:#0b6b3a;
+
+color:#fff;
+
+}
+/* ==========================================
+   SECTION
+========================================== */
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    color:#0b6b3a;
+    margin-bottom:50px;
+    font-weight:700;
+}
+
+/* ==========================================
+   SEARCH BOX
+========================================== */
+
+.search-section{
+    text-align:center;
+}
+
+#searchInput{
+    width:100%;
+    max-width:500px;
+    padding:15px 20px;
+    border:2px solid #0b6b3a;
+    border-radius:40px;
+    font-size:17px;
+    outline:none;
+    transition:.3s;
+}
+
+#searchInput:focus{
+    box-shadow:0 0 12px rgba(11,107,58,.25);
+}
+
+/* ==========================================
+   CATEGORY BUTTONS
+========================================== */
+
+.category-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:20px;
+}
+
+.category-btn{
+    padding:12px 28px;
+    border:none;
+    border-radius:30px;
+    background:#0b6b3a;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.category-btn:hover{
+    background:#084c29;
+    transform:translateY(-3px);
+}
+
+.category-btn.active{
+    background:#ff9800;
+}
+
+/* ==========================================
+   PRODUCT GRID
+========================================== */
+
+.card-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+/* ==========================================
+   PRODUCT CARD
+========================================== */
+
+.card{
+    position:relative;
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+    transition:.35s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+.card h3{
+    color:#0b6b3a;
+    margin:18px 0 10px;
+    font-size:24px;
+}
+
+.card p{
+    color:#666;
+    font-size:16px;
+    padding:0 20px;
+    min-height:60px;
+}
+
+.card h4{
+    color:#ff9800;
+    font-size:24px;
+    margin:20px 0;
+    font-weight:700;
+}
+
+.card .btn{
+    margin-bottom:25px;
+}
+
+/* ==========================================
+   BADGES
+========================================== */
+
+.badge{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:#ff9800;
+    color:#fff;
+    padding:8px 14px;
+    border-radius:25px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+.badge.new{
+    background:#28a745;
+}
+/* ==========================================
+   GALLERY
+========================================== */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.35s;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   LIGHTBOX
+========================================== */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:15px;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:25px;
+    right:35px;
+    color:#fff;
+    font-size:50px;
+    cursor:pointer;
+}
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.about-container{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.about-image{
+    flex:1;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.about-text{
+    flex:1;
+}
+
+.about-text h3{
+    font-size:32px;
+    color:#0b6b3a;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    font-size:18px;
+    color:#555;
+    margin-bottom:18px;
+}
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.features .card{
+    padding:35px 25px;
+}
+
+.features i{
+    color:#0b6b3a;
+    margin-bottom:20px;
+}
+
+.features h3{
+    margin-bottom:15px;
+}
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.contact-container{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.contact-info,
+.contact-form{
+    flex:1;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#0b6b3a;
+}
+
+.contact-form textarea{
+    resize:vertical;
+    min-height:140px;
+}
+
+.contact-form button{
+    border:none;
+}
+
+/* ==========================================
+   GOOGLE MAP
+========================================== */
+
+.map iframe{
+    width:100%;
+    height:420px;
+    border:none;
+    border-radius:20px;
+}
+
+/* ==========================================
+   SOCIAL BUTTONS
+========================================== */
+
+.social{
+    text-align:center;
+}
+
+.social-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.facebook,
+.tiktok{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    padding:15px 30px;
+    color:#fff;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.facebook{
+    background:#1877F2;
+}
+
+.facebook:hover{
+    background:#0d65d9;
+    transform:translateY(-5px);
+}
+
+.tiktok{
+    background:#000;
+}
+
+.tiktok:hover{
+    background:#222;
+    transform:translateY(-5px);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+    background:#0b6b3a;
+    color:#fff;
+    padding:60px 8% 30px;
+    margin-top:60px;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:35px;
+}
+
+.footer-container h3{
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.footer-container p{
+    margin-bottom:10px;
+    color:#e8f5e9;
+}
+
+.footer-container a{
+    color:#fff;
+    transition:.3s;
+}
+
+.footer-container a:hover{
+    color:#ffd54f;
+}
+
+.copyright{
+    margin-top:35px;
+    border-top:1px solid rgba(255,255,255,.25);
+    padding-top:20px;
+    text-align:center;
+    font-size:15px;
+}
+
+/* ==========================================
+   FLOATING BUTTONS
+========================================== */
+
+.floating-call,
+.floating-facebook,
+.floating-tiktok{
+
+position:fixed;
+
+right:20px;
+
+width:58px;
+
+height:58px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:24px;
+
+color:#fff;
+
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+z-index:999;
+
+transition:.3s;
+
+}
+
+.floating-call{
+
+bottom:170px;
+
+background:#28a745;
 
-<div class="card soap">
+}
 
-<span class="badge">Best Seller</span>
+.floating-facebook{
 
-<img src="images/soap1.jpg" alt="Natural Soap">
+bottom:95px;
 
-<h3>Natural Handmade Soap</h3>
+background:#1877F2;
 
-<p>
-Gentle cleansing with natural ingredients.
-</p>
+}
 
-<div class="rating">
-⭐⭐⭐⭐⭐
-</div>
+.floating-tiktok{
 
-<h4>5,000 MMK</h4>
+bottom:20px;
 
-<a href="contact.html" class="btn">
-Order Now
-</a>
+background:#000;
 
-</div>
+}
 
-<!-- PRODUCT 2 -->
+.floating-call:hover,
+.floating-facebook:hover,
+.floating-tiktok:hover{
 
-<div class="card soap">
+transform:scale(1.1);
 
-<span class="badge new">New</span>
+}
 
-<img src="images/soap2.jpg" alt="Herbal Soap">
+/* ==========================================
+   ANIMATION
+========================================== */
 
-<h3>Herbal Soap</h3>
+.card,
+.hero-left,
+.hero-right,
+.about-image,
+.about-text{
 
-<p>
-Refreshing herbal handmade soap.
-</p>
+animation:fadeUp .8s ease;
 
-<div class="rating">
-⭐⭐⭐⭐☆
-</div>
+}
 
-<h4>6,000 MMK</h4>
+@keyframes fadeUp{
 
-<a href="contact.html" class="btn">
-Order Now
-</a>
+from{
 
-</div>
+opacity:0;
 
-<!-- PRODUCT 3 -->
+transform:translateY(40px);
 
-<div class="card shampoo">
+}
 
-<img src="images/shampoo1.jpg" alt="Herbal Shampoo">
+to{
 
-<h3>Herbal Shampoo</h3>
+opacity:1;
 
-<p>
-Healthy hair with natural herbs.
-</p>
+transform:translateY(0);
 
-<div class="rating">
-⭐⭐⭐⭐⭐
-</div>
+}
 
-<h4>8,000 MMK</h4>
+}
 
-<a href="contact.html" class="btn">
-Order Now
-</a>
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
 
-</div>
+/* ---------- TABLET ---------- */
 
-<!-- PRODUCT 4 -->
+@media (max-width:992px){
 
-<div class="card shampoo">
+.hero{
 
-<img src="images/shampoo2.jpg" alt="Premium Shampoo">
+flex-direction:column;
 
-<h3>Premium Shampoo</h3>
+text-align:center;
 
-<p>
-Smooth & silky hair care.
-</p>
+}
 
-<div class="rating">
-⭐⭐⭐⭐☆
-</div>
+.hero-left,
+.hero-right{
 
-<h4>10,000 MMK</h4>
+width:100%;
 
-<a href="contact.html" class="btn">
-Order Now
-</a>
+}
 
-</div>
+.hero-right img{
 
-<!-- PRODUCT 5 -->
+max-width:380px;
 
-<div class="card haircare">
+}
 
-<img src="images/hairtonic.jpg" alt="Hair Tonic">
+.about-container,
+.contact-container{
 
-<h3>Hair Tonic</h3>
+flex-direction:column;
 
-<p>
-Supports stronger-looking hair.
-</p>
+}
 
-<div class="rating">
-⭐⭐⭐⭐⭐
-</div>
+.section-title{
 
-<h4>12,000 MMK</h4>
+font-size:34px;
 
-<a href="contact.html" class="btn">
-Order Now
-</a>
+}
 
-</div>
+.hero-left h1{
 
-<!-- PRODUCT 6 -->
+font-size:42px;
 
-<div class="card haircare">
+}
 
-<img src="images/hairoil.jpg" alt="Hair Oil">
+}
 
-<h3>Hair Oil</h3>
+/* ---------- MOBILE ---------- */
 
-<p>
-Natural oil for healthy hair.
-</p>
+@media (max-width:768px){
 
-<div class="rating">
-⭐⭐⭐⭐⭐
-</div>
+.navbar{
 
-<h4>15,000 MMK</h4>
+flex-wrap:wrap;
 
-<a href="contact.html" class="btn">
-Order Now
-</a>
+padding:15px 20px;
 
-</div>
+}
 
-<!-- PRODUCT 7 -->
+.logo h2{
 
-<div class="card soap">
+font-size:20px;
 
-<img src="images/soap3.jpg" alt="Beauty Soap">
+}
 
-<h3>Beauty Soap</h3>
+.logo img{
 
-<p>
-Natural beauty care soap.
-</p>
+width:50px;
 
-<div class="rating">
-⭐⭐⭐⭐☆
-</div>
+height:50px;
 
-<h4>7,000 MMK</h4>
+}
 
-<a href="contact.html" class="btn">
-Order Now
-</a>
+.menu-toggle{
 
-</div>
+display:block;
 
-<!-- PRODUCT 8 -->
+}
 
-<div class="card shampoo">
+.nav-links{
 
-<img src="images/shampoo3.jpg" alt="Daily Shampoo">
+display:none;
 
-<h3>Daily Shampoo</h3>
+width:100%;
 
-<p>
-Gentle everyday shampoo.
-</p>
+flex-direction:column;
 
-<div class="rating">
-⭐⭐⭐⭐⭐
-</div>
+margin-top:15px;
 
-<h4>9,000 MMK</h4>
+background:#0b6b3a;
 
-<a href="contact.html" class="btn">
-Order Now
-</a>
+border-radius:10px;
 
-</div>
+padding:10px 0;
 
-</div>
+}
 
-</section>
+.nav-links.active{
 
-<!-- ==========================
-WHY CHOOSE US
-========================== -->
+display:flex;
 
-<section class="features">
+}
 
-<h2 class="section-title">
+.nav-links li{
 
-Why Choose Shwe Sin?
+text-align:center;
 
-</h2>
+margin:10px 0;
 
-<div class="card-container">
+}
 
-<div class="card">
+.hero{
 
-<i class="fas fa-leaf fa-3x"></i>
+padding:60px 20px;
 
-<h3>100% Natural</h3>
+}
 
-<p>
-Made with carefully selected natural ingredients.
-</p>
+.hero-left h1{
 
-</div>
+font-size:34px;
 
-<div class="card">
+}
 
-<i class="fas fa-heart fa-3x"></i>
+.hero-left p{
 
-<h3>Safe for Family</h3>
+font-size:17px;
 
-<p>
-Suitable for everyday personal care.
-</p>
+}
 
-</div>
+.btn,
+.btn-outline{
 
-<div class="card">
+display:block;
 
-<i class="fas fa-award fa-3x"></i>
+width:100%;
 
-<h3>Quality Products</h3>
+margin:10px 0;
 
-<p>
-Prepared with care and attention to quality.
-</p>
+text-align:center;
 
-</div>
+}
 
-</div>
+.section-title{
 
-</section>
+font-size:30px;
 
-<!-- ==========================
-SOCIAL
-========================== -->
+}
 
-<section class="social">
+.card-container{
 
-<h2 class="section-title">
+grid-template-columns:1fr;
 
-Follow Us
+}
 
-</h2>
+.gallery-grid{
 
-<div class="social-buttons">
+grid-template-columns:1fr;
 
-<a href="https://www.facebook.com/profile.php?id=100064045721242"
-target="_blank"
-class="facebook">
+}
 
-<i class="fab fa-facebook-f"></i>
+.footer-container{
 
-Facebook
+grid-template-columns:1fr;
 
-</a>
+text-align:center;
 
-<a href="#"
-class="tiktok">
+}
 
-<i class="fab fa-tiktok"></i>
+.social-buttons{
 
-TikTok
+flex-direction:column;
 
-</a>
+align-items:center;
 
-</div>
+}
 
-</section>
+.facebook,
+.tiktok{
 
-<!-- ==========================
-FLOATING BUTTONS
-========================== -->
+width:240px;
 
-<a href="tel:09780828066"
-class="floating-call">
+}
 
-<i class="fas fa-phone"></i>
+}
 
-</a>
+/* ---------- SMALL MOBILE ---------- */
 
-<a href="https://www.facebook.com/profile.php?id=100064045721242"
-target="_blank"
-class="floating-facebook">
+@media (max-width:480px){
 
-<i class="fab fa-facebook-f"></i>
+.logo h2{
 
-</a>
+font-size:17px;
 
-<a href="#"
-class="floating-tiktok">
+}
 
-<i class="fab fa-tiktok"></i>
+.hero-left h1{
 
-</a>
+font-size:28px;
 
-<!-- ==========================
-FOOTER
-========================== -->
+}
 
-<footer>
+.hero-left p{
 
-<div class="footer-container">
+font-size:16px;
 
-<div>
+}
 
-<h3>Shwe Sin Natural Products</h3>
+.section-title{
 
-<p>
+font-size:26px;
 
-Natural Handmade Soap
+}
 
-Herbal Shampoo
+.card h3{
 
-Hair Care Products
+font-size:20px;
 
-</p>
+}
 
-</div>
+.card h4{
 
-<div>
+font-size:20px;
 
-<h3>Quick Links</h3>
+}
 
-<p><a href="index.html">Home</a></p>
+.floating-call,
+.floating-facebook,
+.floating-tiktok{
 
-<p><a href="products.html">Products</a></p>
+width:50px;
 
-<p><a href="gallery.html">Gallery</a></p>
+height:50px;
 
-<p><a href="about.html">About</a></p>
+font-size:20px;
 
-<p><a href="contact.html">Contact</a></p>
+right:15px;
 
-</div>
+}
 
-<div>
+.floating-call{
 
-<h3>Contact</h3>
+bottom:145px;
 
-<p>
+}
 
-Phone
+.floating-facebook{
 
-09780828066
+bottom:80px;
 
-</p>
+}
 
-<p>
+.floating-tiktok{
 
-Facebook Page
+bottom:15px;
 
-</p>
+}
 
-</div>
+}
 
-</div>
+/* ==========================================
+   CUSTOM SCROLLBAR
+========================================== */
 
-<div class="copyright">
+::-webkit-scrollbar{
+    width:10px;
+}
 
-© 2026
+::-webkit-scrollbar-track{
+    background:#e8f5e9;
+}
 
-Shwe Sin Natural Products
+::-webkit-scrollbar-thumb{
+    background:#0b6b3a;
+    border-radius:20px;
+}
 
-All Rights Reserved.
+::-webkit-scrollbar-thumb:hover{
+    background:#084c29;
+}
 
-</div>
+/* ==========================================
+   TEXT SELECTION
+========================================== */
 
-</footer>
+::selection{
+    background:#0b6b3a;
+    color:#ffffff;
+}
 
-<script src="script.js"></script>
+/* ==========================================
+   SMOOTH TRANSITIONS
+========================================== */
 
-</body>
+button,
+a,
+input,
+textarea,
+.card,
+img{
+    transition:all .3s ease;
+}
 
-</html>
+/* ==========================================
+   INPUT PLACEHOLDER
+========================================== */
+
+input::placeholder,
+textarea::placeholder{
+    color:#999;
+}
+
+/* ==========================================
+   FOCUS STYLE
+========================================== */
+
+input:focus,
+textarea:focus,
+button:focus{
+    outline:none;
+}
+
+/* ==========================================
+   UTILITY CLASSES
+========================================== */
+
+.text-center{
+    text-align:center;
+}
+
+.mt-20{
+    margin-top:20px;
+}
+
+.mt-40{
+    margin-top:40px;
+}
+
+.mb-20{
+    margin-bottom:20px;
+}
+
+.mb-40{
+    margin-bottom:40px;
+}
+
+/* ==========================================
+   IMAGE EFFECTS
+========================================== */
+
+.card img,
+.gallery-grid img{
+    transition:transform .4s ease;
+}
+
+.card:hover img{
+    transform:scale(1.05);
+}
+
+/* ==========================================
+   LOADING ANIMATION
+========================================== */
+
+.fade-in{
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+}
+
+to{
+
+opacity:1;
+
+}
+
+}
+
+/* ==========================================
+   PRINT STYLE
+========================================== */
+
+@media print{
+
+.navbar,
+footer,
+.floating-call,
+.floating-facebook,
+.floating-tiktok{
+
+display:none;
+
+}
+
+body{
+
+background:#fff;
+
+color:#000;
+
+}
+
+}
+
+/* ==========================================
+   VERSION INFORMATION
+========================================== */
+
+/*
+
+SHWE SIN NATURAL PRODUCTS
+
+STYLE.CSS
+
+Version : 5.0
+
+Responsive : Yes
+
+Mobile Friendly : Yes
+
+Tablet Friendly : Yes
+
+Desktop Friendly : Yes
+
+Browser Support :
+
+Chrome
+
+Edge
+
+Firefox
+
+Safari
+
+Opera
+
+Designed with ❤️
+
+*/
+
+/* ==========================================
+   RATING
+========================================== */
+
+.rating{
+    color:#ffc107;
+    font-size:18px;
+    margin-top:12px;
+}
+
